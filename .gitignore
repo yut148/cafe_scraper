@@ -6,5 +6,8 @@
 /doc/
 /pkg/
 /spec/reports/
+/spec/status.txt
 /tmp/
 .sublime-*
+vendor/bundle
+test.pstore
