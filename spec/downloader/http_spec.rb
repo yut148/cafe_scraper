@@ -7,7 +7,7 @@
 require 'spec_helper'
 
 module CafeScraper
-  module Scraper
+  module Downloader
     describe HTTP do
       describe "fetch_page" do
         before(:each) do
@@ -16,7 +16,7 @@ module CafeScraper
 
         it "should still return a Page if an exception occurs during the HTTP connection" do
           allow(HTTP).to receive(:refresh_connection).and_raise(StandardError)
-          http = CafeScraper::Scraper::HTTP.new
+          http = CafeScraper::Downloader::HTTP.new
           expect(http.fetch_page(SPEC_DOMAIN)).to be_instance_of(Page)
         end
 

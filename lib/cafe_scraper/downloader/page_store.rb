@@ -7,7 +7,7 @@
 require 'forwardable'
 
 module CafeScraper
-  module Scraper
+  module Downloader
     class PageStore
       extend Forwardable
 

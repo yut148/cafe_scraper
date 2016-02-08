@@ -14,7 +14,7 @@ class WEBrick::Cookie
 end
 
 module CafeScraper
-  module Scraper
+  module Downloader
     class CookieStore < DelegateClass(Hash)
 
       def initialize(cookies = nil)

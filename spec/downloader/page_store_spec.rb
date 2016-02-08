@@ -9,7 +9,7 @@ require 'spec_helper'
 %w[pstore].each { |file| require "cafe_scraper/storage/#{file}.rb" }
 
 module CafeScraper
-  module Scraper
+  module Downloader
     describe PageStore do
 
       # before(:all) do

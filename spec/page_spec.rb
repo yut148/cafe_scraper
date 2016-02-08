@@ -12,7 +12,7 @@ module CafeScraper
 
     before(:each) do
       FakeWeb.clean_registry
-      @http = CafeScraper::Scraper::HTTP.new
+      @http = CafeScraper::Downloader::HTTP.new
       @page = @http.fetch_page(FakePage.new('home', :links => '1').url)
     end
 

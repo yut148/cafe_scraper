@@ -8,7 +8,7 @@ $:.unshift(File.dirname(__FILE__))
 require 'spec_helper'
 
 module CafeScraper
-  module Scraper
+  module Downloader
     describe CookieStore do
       it "should start out empty if no cookies are specified" do
         expect(CookieStore.new.empty?).to be true

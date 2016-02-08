@@ -6,10 +6,10 @@
 
 require 'net/https'
 require 'cafe_scraper/page'
-require 'cafe_scraper/scraper/cookie_store'
+require 'cafe_scraper/downloader/cookie_store'
 
 module CafeScraper
-  module Scraper
+  module Downloader
     class HTTP
       # Maximum number of redirects to follow on each get_response
       REDIRECT_LIMIT = 5
@@ -20,7 +20,7 @@ module CafeScraper
       def initialize(opts = {})
         @connections = {}
         @opts = opts
-        @cookie_store = CafeScraper::Scraper::CookieStore.new(@opts[:cookies])
+        @cookie_store = CafeScraper::Downloader::CookieStore.new(@opts[:cookies])
       end
 
       #
